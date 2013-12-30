@@ -3,7 +3,7 @@
     <% @listings.each do |listing| %>
       <div class="col-md-3">
         <div class="thumbnail">
-          <%= image_tag listing.image.url %>
+
           <div class="caption">
             <h3><%= listing.name %></h3>
             <p><%= number_to_currency(listing.price) %></p>
