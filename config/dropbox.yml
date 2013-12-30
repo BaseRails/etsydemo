@@ -3,4 +3,4 @@ app_secret: ENV["APP_SECRET"]
 access_token: ENV["ACCESS_TOKEN"]
 access_token_secret: ENV["ACCESS_TOKEN_SECRET"]
 user_id: ENV["USER_ID"]
-access_type: ENV["ACCESS_TYPE"]
+access_type: "app_folder"
