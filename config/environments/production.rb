@@ -83,7 +83,16 @@ Etsydemo::Application.configure do
 
   config.paperclip_defaults = {
     :storage => :dropbox,
-    :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
-    :path => ":style/:id_:filename"
+    :path => ":style/:id_:filename",
+    # :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+    :dropbox_credentials => {
+      app_key: "9s6t8tsrl0turoi",
+      app_secret: ENV["APP_SECRET"],
+      access_token: "189egb1nw6bjljr7",
+      access_token_secret: ENV["ACCESS_TOKEN_SECRET"],
+      user_id: "251697068",
+      access_type: "app_folder"
+    }
+
   }
 end
