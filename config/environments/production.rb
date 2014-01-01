@@ -83,6 +83,7 @@ Etsydemo::Application.configure do
 
   config.paperclip_defaults = {
     :storage => :dropbox,
+    :path => ":style/:id_:filename",
 
     # :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
     :dropbox_credentials => {
