@@ -80,4 +80,10 @@ Etsydemo::Application.configure do
 
   # Required for Devise. Remember to change localhost:3000 to actual application host
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.paperclip_defaults = {
+    :storage => :dropbox,
+    :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+    :path => ":style/:id_:filename"
+  }
 end
