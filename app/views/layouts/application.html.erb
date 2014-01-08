@@ -13,7 +13,6 @@
 <div class="container">
 
   <% flash.each do |name, msg| %>
-    <% logger.info "Name is #{name}. Msg is #{msg}" %>
     <% if msg.is_a?(String) %>
       <div class="alert alert-<%= name == :notice ? "success" : "danger" %> alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

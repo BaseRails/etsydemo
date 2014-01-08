@@ -1,6 +1,9 @@
-Etsydemo::Application.routes.draw do
+Etsydemo::Application.routes.draw do#
+
   devise_for :users
-  resources :listings
+  resources :listings do
+    resources :orders
+  end
 
   get "pages/about"
   get "pages/contact"

@@ -1,0 +1,30 @@
+<%= form_for([@listing, @order]) do |f| %>
+ <% if @order.errors.any? %>
+   <div id="error_explanation" class="alert alert-danger alert-dismissable">
+     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+     <h4><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h4>
+
+     <ul>
+     <% @order.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+
+ <div class="form-group">
+   <%= f.label :address %>
+   <%= f.text_field :address, class: "form-control" %>
+ </div>
+ <div class="form-group">
+   <%= f.label :city %>
+   <%= f.text_field :city, class: "form-control" %>
+ </div>
+ <div class="form-group">
+   <%= f.label :state %>
+   <%= f.text_field :state, class: "form-control" %>
+ </div>
+ <div class="form-group">
+   <%= f.submit "Complete Order", class: "btn btn-success" %>
+ </div>
+<% end %>
