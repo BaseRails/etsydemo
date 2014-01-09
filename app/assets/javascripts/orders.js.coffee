@@ -5,9 +5,10 @@ jQuery ->
 payment =
   setupForm: ->
     $('#new_order').submit ->
-      $('input[type=submit]').attr('disabled', true)
-      Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
-      false
+      if $('input').length > 6
+        $('input[type=submit]').attr('disabled', true)
+        Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
+        false
 
   handleStripeResponse: (status, response) ->
     if status == 200
