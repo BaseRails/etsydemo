@@ -42,10 +42,10 @@ class ListingsController < ApplicationController
         :type => "individual",
         :bank_account => token
         )
-    end
 
-    current_user.recipient = recipient.id
-    current_user.save
+      current_user.recipient = recipient.id
+      current_user.save
+    end
 
     respond_to do |format|
       if @listing.save
