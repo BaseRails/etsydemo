@@ -10,9 +10,7 @@
   <% @listings.each do |listing| %>
     <tr>
       <td>
-        <% if false %>
-          <%= image_tag listing.image.url(:thumb) %>
-        <% end %>
+        <%= image_tag listing.image.url(:thumb) %>
       </td>
       <td><%= listing.name %></td>
       <td><%= listing.description %></td>
